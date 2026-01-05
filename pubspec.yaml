@@ -1,0 +1,51 @@
+name: nova_app
+description: "A new Flutter project."
+publish_to: 'none' 
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.1 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Icons
+  cupertino_icons: ^1.0.6
+
+  # Camera & Permissions
+  camera: ^0.10.5
+  permission_handler: ^11.0.1
+  
+  # Object Detection (YOLO - Yellow Box)
+  flutter_vision: ^1.1.4
+
+  flutter_tts: ^3.8.0
+  
+  # Service Locator
+  get_it: ^9.2.0
+
+  # 🚀 GOOGLE AI PACKAGES (Face & Text)
+  google_mlkit_object_detection: ^0.11.0
+  google_mlkit_text_recognition: ^0.11.0
+  google_mlkit_face_detection: ^0.9.0
+  
+  # Text to Speech
+  
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+# -----------------------------------------
+# FLUTTER CONFIGURATION
+# -----------------------------------------
+flutter:
+  uses-material-design: true
+
+  # ✅ YOUR ASSETS ARE REGISTERED HERE
+  assets:
+    - assets/models/yolov8n.tflite
+    - assets/models/labels.txt
