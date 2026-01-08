@@ -16,13 +16,15 @@ class CameraService {
 
     controller = CameraController(
       firstCamera,
-      ResolutionPreset.low,  // Low resolution to prevent memory crash
+      // ⚡ CHANGED TO LOW.
+      // This creates a small image (320x240) that fits perfectly into the AI's memory.
+      // This solves the "4915200 bytes" crash.
+      ResolutionPreset.low,
       enableAudio: false,
-      imageFormatGroup: ImageFormatGroup.yuv420,  // YUV420 format for YOLO
+      imageFormatGroup: ImageFormatGroup.yuv420,
     );
 
     await controller!.initialize();
-    // No rotation lock here, to prevent the sideways screen issue.
   }
 
   void dispose() {

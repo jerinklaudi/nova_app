@@ -15,16 +15,21 @@ dependencies:
   cupertino_icons: ^1.0.6
 
   # Camera & Permissions
-  camera: ^0.10.5
+  
   permission_handler: ^11.0.1
   
   # Object Detection (YOLO - Yellow Box)
   flutter_vision: ^1.1.4
-
-  flutter_tts: ^3.8.0
   
   # Service Locator
   get_it: ^9.2.0
+  shake: any
+
+  flutter_tts: ^3.8.5      # For Voice Over
+  vibration: ^1.7.7         # For Haptic Feedback
+  sensors_plus: ^5.0.0      # For Shake Detection
+  google_fonts: ^6.1.0      # For Professional Typography
+  camera: ^0.10.5+9         # (Keep your existing camera dependency)
 
   # 🚀 GOOGLE AI PACKAGES (Face & Text)
   google_mlkit_object_detection: ^0.11.0
